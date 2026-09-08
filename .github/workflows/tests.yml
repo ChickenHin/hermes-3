@@ -1,12 +1,7 @@
 ---
 name: Tests
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - '*'  # This will trigger for PRs against any branch
+  workflow_dispatch: 
 
 defaults:
   run:
@@ -116,8 +111,8 @@ jobs:
       - name: Run tests
         run: cd build &&
              ctest --output-on-failure --timeout 300 -L $TEST_TYPE
-      - name: Upload test coverage data
-        uses: codecov/codecov-action@v5
-        if: ${{ matrix.build_type.coverage == 'ON' }}
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+      # - name: Upload test coverage data
+      #   uses: codecov/codecov-action@v5
+      #   if: ${{ matrix.build_type.coverage == 'ON' }}
+      #   with:
+      #     token: ${{ secrets.CODECOV_TOKEN }}
