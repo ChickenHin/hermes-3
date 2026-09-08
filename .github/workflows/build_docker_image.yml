@@ -4,11 +4,11 @@ name: Build hermes-3 Docker image
 # when a release is released (so versioned image tags are published), or when
 # manually triggered.
 on:
-  push:
-    branches:
-      - 'master'
-  release:
-    types: [released]
+  # push:
+  #   branches:
+  #     - 'master'
+  # release:
+  #   types: [released]
 
   workflow_dispatch:  # Allows manual triggering
 
