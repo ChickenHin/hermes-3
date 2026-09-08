@@ -9,8 +9,8 @@ name: Clean up old container images
 
 on:
   # Monthly; offset from the builder build (23 1 1 * *) to avoid racing a push.
-  schedule:
-    - cron: '0 3 15 * *'
+  # schedule:
+  #   - cron: '0 3 15 * *'
   workflow_dispatch:
     inputs:
       dry-run:
