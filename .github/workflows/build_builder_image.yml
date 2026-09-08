@@ -5,9 +5,9 @@ on:
   workflow_dispatch:  # Allows manual triggering
   release:
     types: [released]
-  schedule:
-    # Run monthly, at 1:23AM UTC on the 1st
-    - cron: '23 1 1 * *'
+  # schedule:
+  #   # Run monthly, at 1:23AM UTC on the 1st
+  #   - cron: '23 1 1 * *'
 
 permissions:
   contents: read
